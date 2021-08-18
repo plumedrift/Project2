@@ -1,0 +1,18 @@
+Problem 1: LRU Cache
+====================
+
+I chose to use an Ordered Dictionary for my cache's data structure because
+I found its attributes ideal for the problem.
+
+- Its' ability to remember order of entry allowed it to function as a queue
+- Can store key, value pairs easily
+- Can easily delete/reinsert keys to make sure that multiple operations on the same
+    key don't create multiple entries in the cache.
+
+I also chose to define the __str__ function for easier troubleshooting.
+
+Space Complexity:
+O(n) where n is the size of the cache.
+
+Time Complexity:
+O(1) for all operations

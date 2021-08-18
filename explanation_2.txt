@@ -1,0 +1,14 @@
+Problem 2: File Recursion
+=========================
+No additional data structures needed. Decided to use recursion to navigate the tree-like
+dataset, used a helper function before calling the recursive method to check for certain edge cases,
+such as wrong pathname, or no files with specified suffix found.
+
+
+Space Complexity:
+    O(n) where n is the total number of files with the specified suffix, which determines
+            the size of the only created list.
+
+Time Complexity:
+    O(n) where n is the size of the largest list being returned from the recursive calls
+        and then being iterated on via the extend method.

@@ -1,0 +1,14 @@
+Problem 5: Blockchain
+===========================
+Honestly, I was intimidated by this one, so I'm glad that I was overestimating it.
+I used the provided hash function on the data and timestamp together to vastly reduce the
+likelihood of a collision. Other than that, it was mostly a linked list implementation with
+the corresponding space/time requirements.
+
+Space Complexity:
+    O(n) Only needs a node for each element in the blockchain.
+
+Time Complexity:
+    O(1) Insert will take constant time due to the list being doubly-linked. I'm not sure if delete
+            would be needed in a full-featured implementation, but being doubly-linked will certainly
+            help with those future operations as well.

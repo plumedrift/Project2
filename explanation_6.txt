@@ -1,0 +1,32 @@
+Problem 6: Union and Intersection of Two Linked Lists
+=====================================================
+
+
+Union
+=====
+While I chose not to use any additional data structures besides the original linked lists,
+and a new linked list for the result, I did create a helper function called "contains(key)"
+to return True if the key is found within the linkedList. This function runs in O(n)
+I also updated the LinkedList to track the tail and size, making the append and size operations run in constant-time.
+
+Space Complexity:
+    O(m+n) where m is the number of elements in the first list, and n the number of elements in the second.
+
+Time Complexity:
+    O(n^2) where n is the final number of elements in union_list.
+        because searching for each element (assuming each is unique) will take O(1+2+3+...+n)
+        which reduces to O((n^2+n)/2) and then to O(n^2) and dominates the remaining constant and linear-time operations.
+
+Intersection
+============
+I chose to iterate my main loop on the smaller linked list in order to limit the number of calls to my helper
+function, "contains" which runs at linear time.
+
+Space Complexity:
+    O(n) where n is the number of elements in the first list.
+        In the worst case, we are adding all of the elements in the first list, because they are all in the second.
+
+Time Complexity:
+    O(m^2) where m is the number of elements in the second, search list.
+        This is so because searching for the iterated element in the second list is the most costly operation in the loop.
+        m will always be greater than or equal to n, so it defines our run-time.

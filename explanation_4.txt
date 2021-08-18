@@ -1,0 +1,15 @@
+Problem 4: Active Directory
+===========================
+My solution uses recursion to implement a DFS Traversal on the nested groups, looking
+for the key user. I decided to use a dictionary to keep track of which groups have been
+visited, in order to avoid any problematic loops and to keep the solution from repeating
+work.
+
+Space Complexity:
+    O(n) where n is the number of unique groups visited. The only additional structure
+    created is a dictionary with this number of key-value pairs.
+
+Time Complexity:
+    O(n) where n is the total number of groups within the directory below the group
+        that is called on. This is so because the complexity of the DFS search is linear
+        with the number of edges, which is equal to the number of nodes - 1.

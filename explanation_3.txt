@@ -1,0 +1,20 @@
+Problem 3: Huffman encoding
+=========================
+I chose to use a minHeap structure to organize the priority queue, because I've never implemented one before.
+I also thought being able to more easily insert and delete nodes would be an advantage over a list implementation.
+I used the Huffman_tree class so that I could neatly place the root node back into the minHeap after merging the
+lowest two elements. The gen_cipher method is also placed within this class, because it is a higher-level function.
+When creating the cipher for encoding, I did use a dictionary to more easily map the characters to their coded counterparts.
+I really enjoyed all that I learned about Binary trees in this project
+
+Space Complexity:
+    O(N) All that is needed is space proportional to the number of distinct characters.
+        These elements exist in a dictionary, then also in the minHeap, then they migrate out of the minHeap
+        into the Huffman Tree.
+
+Time Complexity:
+    O(log N) Both minHeap and huffman_Tree structures are binary trees, so all of their percolate, insert, pop
+        operations are limited to log N run time.
+    This is true for each character decoded as well, so we can say
+        that decoding is run-time O(M log N) where M is the number of characters in the message and N is the number of nodes
+        in the Huffman Tree.
